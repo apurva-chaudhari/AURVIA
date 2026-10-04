@@ -1,0 +1,53 @@
+/* ============================================================
+   AURVIA - AUTH PAGES
+   ============================================================ */
+
+.auth-wrapper {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #f8f6fb, #f0eafb);
+}
+
+.auth-card {
+    background: #fff;
+    border: 1px solid var(--aurvia-border);
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 18px 40px rgba(33, 27, 45, .06);
+}
+
+.auth-card .form-label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: var(--aurvia-muted);
+}
+
+.strength-bar {
+    height: 5px;
+    border-radius: 5px;
+    background: var(--aurvia-border);
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.strength-bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    transition: width .25s ease, background .25s ease;
+}
+
+@media (max-width: 576px) {
+    .auth-card { padding: 24px; }
+}

@@ -1,0 +1,24 @@
+# ---------- Secrets (never commit real keys/passwords) ----------
+config/razorpay.php
+config/database.php
+.env
+
+# ---------- Logs ----------
+logs/*.log
+
+# ---------- OS / editor files ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# ---------- Archives and temp files ----------
+*.zip
+*.rar
+*.tmp
+*.bak
+
+# ---------- Dependencies (if you add any later) ----------
+vendor/
+node_modules/

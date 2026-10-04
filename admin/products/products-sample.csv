@@ -1,0 +1,4 @@
+name,category,description,price,brand,discount,stock,low_stock_at,status,image,attributes
+Sample Steel Bottle,Everyday Essentials,A sturdy insulated bottle for daily use and travel.,799,AURVIA,10,50,5,active,,Material=Stainless Steel | Capacity=750 ml
+Sample Desk Lamp,Home & Living,A warm LED desk lamp with three brightness levels.,1299,AURVIA,5,30,5,active,,Power=USB | Light=Warm White
+Sample Cable Organizer,Tech & Accessories,A compact organizer that keeps cables and chargers tidy.,449,AURVIA,0,80,10,active,,Material=Silicone | Slots=6

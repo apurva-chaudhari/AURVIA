@@ -1,0 +1,152 @@
+/* ============================================================
+   AURVIA ADMIN PANEL
+   ============================================================ */
+
+.admin-body { background: #f4f2f8; font-family: 'Poppins', sans-serif; }
+
+.admin-shell { display: flex; min-height: 100vh; }
+
+/* Bootstrap's .offcanvas-lg makes its background transparent from 992px up,
+   which hid the dark sidebar (white text on a white page). Force it back. */
+.admin-sidebar.offcanvas-lg {
+    background-color: var(--aurvia-dark) !important;
+    color: #fff;
+    border: 0;
+}
+
+.admin-sidebar {
+    width: 250px;
+    flex: 0 0 250px;
+    background: var(--aurvia-dark);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 14px;
+}
+
+@media (min-width: 992px) {
+    .admin-sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+}
+
+@media (max-width: 991.98px) {
+    .admin-sidebar.offcanvas-lg { background: var(--aurvia-dark); }
+}
+
+.admin-brand { display: flex; align-items: center; padding: 4px 8px 18px; }
+.admin-brand a { color: #fff; font-size: 24px; text-decoration: none; }
+
+.admin-nav { display: flex; flex-direction: column; gap: 3px; }
+
+.admin-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, .72);
+    font-size: 14px;
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease;
+}
+
+.admin-nav a i { width: 18px; text-align: center; }
+.admin-nav a:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+.admin-nav a.active { background: var(--aurvia-primary); color: #fff; font-weight: 500; }
+
+.admin-side-foot { margin-top: auto; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .1); }
+
+.admin-side-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 12px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, .72);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.admin-side-link:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+
+.admin-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+.admin-topbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 24px;
+    background: #fff;
+    border-bottom: 1px solid var(--aurvia-border);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.admin-title { font-size: 20px; font-weight: 600; margin: 0; }
+
+.admin-content { padding: 24px; }
+
+.admin-card {
+    background: #fff;
+    border: 1px solid var(--aurvia-border);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.admin-card h2, .admin-card h3 { font-size: 16px; font-weight: 600; }
+
+.stat-tile { display: block; text-decoration: none; color: inherit; height: 100%; transition: transform .2s ease, box-shadow .2s ease; }
+.stat-tile:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(33, 27, 45, .08); color: inherit; }
+.stat-tile .icon {
+    width: 42px; height: 42px; border-radius: 12px;
+    background: rgba(108, 74, 182, .10); color: var(--aurvia-primary);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 10px;
+}
+.stat-tile .num { font-size: 24px; font-weight: 600; line-height: 1.2; }
+.stat-tile .lbl { font-size: 12px; color: var(--aurvia-muted); }
+.stat-tile.warn .icon { background: rgba(231, 169, 79, .18); color: #b9790f; }
+.stat-tile.bad .icon { background: rgba(217, 83, 79, .12); color: #d9534f; }
+
+.admin-table th { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--aurvia-muted); font-weight: 500; white-space: nowrap; }
+.admin-table td { vertical-align: middle; font-size: 14px; }
+
+.admin-thumb {
+    width: 44px; height: 44px; border-radius: 10px; object-fit: cover;
+    background: var(--aurvia-light); border: 1px solid var(--aurvia-border);
+    display: flex; align-items: center; justify-content: center; color: var(--aurvia-muted);
+}
+
+.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+.chip-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-tabs a {
+    padding: 5px 14px; border-radius: 20px; font-size: 13px; text-decoration: none;
+    background: #fff; border: 1px solid var(--aurvia-border); color: var(--aurvia-muted);
+}
+.chip-tabs a.active { background: var(--aurvia-primary); border-color: var(--aurvia-primary); color: #fff; }
+
+/* analytics bars */
+.bar-chart { display: flex; align-items: flex-end; gap: 3px; height: 180px; padding-top: 10px; }
+.bar-chart .bar-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; min-width: 0; }
+.bar-chart .bar { width: 100%; background: var(--aurvia-primary); border-radius: 4px 4px 0 0; min-height: 2px; opacity: .85; }
+.bar-chart .bar-col:hover .bar { opacity: 1; }
+.bar-axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--aurvia-muted); margin-top: 6px; }
+
+.hbar { height: 8px; background: #ece8f3; border-radius: 6px; overflow: hidden; }
+.hbar > span { display: block; height: 100%; background: var(--aurvia-primary); border-radius: 6px; }
+
+.timeline-admin { display: flex; gap: 6px; flex-wrap: wrap; }
+.timeline-admin .step {
+    flex: 1; min-width: 80px; text-align: center; font-size: 12px; padding: 8px 4px;
+    border-radius: 8px; background: #ece8f3; color: var(--aurvia-muted);
+}
+.timeline-admin .step.done { background: rgba(41, 150, 111, .15); color: #1f7a58; font-weight: 500; }
+.timeline-admin .step.current { background: var(--aurvia-success); color: #fff; font-weight: 600; }
+
+.login-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--aurvia-dark); padding: 20px; }
+.login-card { width: 100%; max-width: 400px; background: #fff; border-radius: 16px; padding: 32px; }
+
+@media (max-width: 575.98px) {
+    .admin-content { padding: 14px; }
+    .admin-topbar { padding: 12px 14px; }
+}

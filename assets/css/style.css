@@ -1,0 +1,283 @@
+/* ============================================================
+   AURVIA - GLOBAL STYLES
+   ============================================================ */
+
+:root {
+    --aurvia-dark: #211b2d;
+    --aurvia-primary: #6c4ab6;
+    --aurvia-primary-dark: #51358e;
+    --aurvia-accent: #e7a94f;
+    --aurvia-light: #f8f6fb;
+    --aurvia-white: #ffffff;
+    --aurvia-text: #2d2935;
+    --aurvia-muted: #77727f;
+    --aurvia-border: #e9e5ef;
+    --aurvia-success: #29966f;
+    --aurvia-danger: #d9534f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--aurvia-light);
+    color: var(--aurvia-text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+.heading-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--aurvia-dark);
+}
+
+.section-subtitle {
+    color: var(--aurvia-muted);
+    max-width: 650px;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.btn-aurvia {
+    background: var(--aurvia-primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.btn-aurvia:hover {
+    background: var(--aurvia-primary-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-aurvia {
+    border: 1px solid var(--aurvia-primary);
+    color: var(--aurvia-primary);
+    background: transparent;
+    padding: 11px 24px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-aurvia:hover {
+    background: var(--aurvia-primary);
+    color: white;
+}
+
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.aurvia-card {
+    background: var(--aurvia-white);
+    border: 1px solid var(--aurvia-border);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.aurvia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(33, 27, 45, 0.08);
+}
+
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+
+.badge-aurvia {
+    background: rgba(108, 74, 182, 0.10);
+    color: var(--aurvia-primary);
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   FORM ELEMENTS
+   ============================================================ */
+
+.form-control,
+.form-select {
+    border: 1px solid var(--aurvia-border);
+    border-radius: 8px;
+    padding: 11px 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--aurvia-primary);
+    box-shadow: 0 0 0 0.2rem rgba(108, 74, 182, 0.10);
+}
+
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+.text-aurvia {
+    color: var(--aurvia-primary) !important;
+}
+
+.bg-aurvia {
+    background: var(--aurvia-primary) !important;
+}
+
+.bg-aurvia-dark {
+    background: var(--aurvia-dark) !important;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+}
+
+/* ============================================================
+   SLIDE-OUT MENU (hamburger drawer)
+   Lives here, not in shop.css, because the homepage loads only
+   style.css but still shows the navbar and the drawer.
+   ============================================================ */
+
+.account-avatar {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    border-radius: 50%;
+    background: var(--aurvia-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.account-nav { display: flex; flex-direction: column; gap: 2px; }
+
+.account-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: var(--aurvia-text);
+    font-size: 14px;
+    transition: background .2s ease, color .2s ease;
+}
+
+.account-nav a i { width: 18px; text-align: center; color: var(--aurvia-muted); }
+
+.account-nav a:hover { background: var(--aurvia-light); }
+
+.account-nav a.active {
+    background: rgba(108, 74, 182, .10);
+    color: var(--aurvia-primary);
+    font-weight: 600;
+}
+
+.account-nav a.active i { color: var(--aurvia-primary); }
+
+/* ---------- slide-out menu (hamburger) ---------- */
+.drawer-toggle { color: var(--aurvia-dark); border: none; background: transparent; line-height: 1; }
+.drawer-toggle:hover { color: var(--aurvia-primary); }
+.aurvia-drawer { max-width: 310px; }
+.drawer-title {
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--aurvia-muted);
+    padding: 4px 12px;
+}
+
+/* ============================================================
+   REVIEWS & RATINGS
+   ============================================================ */
+
+.stars {
+    --star-fill: #f5a623;
+    --star-empty: #d9d4e3;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, var(--star-fill) calc(var(--rating) / 5 * 100%), var(--star-empty) calc(var(--rating) / 5 * 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    vertical-align: middle;
+}
+
+.stars::before { content: "\2605\2605\2605\2605\2605"; }
+.stars-lg { font-size: 22px; }
+
+.star-input { display: inline-flex; flex-direction: row-reverse; justify-content: flex-end; gap: 2px; }
+.star-input input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.star-input label { font-size: 30px; line-height: 1; color: #d9d4e3; cursor: pointer; transition: color .15s ease, transform .15s ease; }
+.star-input label:hover, .star-input label:hover ~ label, .star-input input:checked ~ label { color: #f5a623; }
+.star-input label:hover { transform: scale(1.1); }
+.star-input input:focus-visible + label { outline: 2px solid var(--aurvia-primary); outline-offset: 2px; border-radius: 4px; }
+
+.rating-row { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 3px 4px; border-radius: 6px; color: var(--aurvia-text); }
+.rating-row:hover, .rating-row.active { background: rgba(108, 74, 182, .08); }
+.rating-row > span:first-child { width: 36px; white-space: nowrap; }
+.rating-row .fa-star { color: #f5a623; font-size: 11px; }
+.rating-bar { flex: 1; height: 8px; background: #ece8f3; border-radius: 6px; overflow: hidden; }
+.rating-bar > span { display: block; height: 100%; background: #f5a623; border-radius: 6px; }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip-row a { padding: 4px 14px; border-radius: 20px; font-size: 13px; background: #fff; border: 1px solid var(--aurvia-border); color: var(--aurvia-muted); }
+.chip-row a.active { background: var(--aurvia-primary); border-color: var(--aurvia-primary); color: #fff; }
